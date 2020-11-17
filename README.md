@@ -13,6 +13,6 @@ use Lichi\Vk\Sdk\ApiProvider;
 
 $apiProvider = new ApiProvider("VK_TOKEN");
 $apiProvider->documents->downloadFromUrl("URL_DOCUMENTS", "file.jpg");
-$attachment = $apiProvider->documents->upload("file.jpg", "USER_ID");
-$message_id = $apiProvider->messages->send("USER_ID", "Message", ['attachment'=>$attachment]);
+$attachment = $apiProvider->documents->upload("file.jpg", USER_ID);
+$message_id = $apiProvider->messages->send(USER_ID, "Text Message", ['attachment'=>$attachment]);
 ```
