@@ -1,16 +1,18 @@
 {
   "name": "lichi/vk-sdk",
-  "description": "Lichi VK SDK",
+  "type": "library",
+  "description": "Core for lichi Framework",
+  "keywords": ["Lichi","lichi"],
+  "homepage": "https://github.com/IvanHunters/lichi-vk-sdk",
+  "license": "MIT",
   "authors": [
     {
       "name": "Ivan Okhotnikov",
-      "email": "ohotnikov.ivan@e-queo.com"
+      "email": "ohotnikovivan@yandex.ru"
     }
   ],
-  "type": "project",
   "minimum-stability": "dev",
   "prefer-stable": true,
-  "license": "commercial",
   "require": {
     "ext-curl": "*",
     "ext-json": "*"
