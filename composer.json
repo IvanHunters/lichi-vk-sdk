@@ -2,7 +2,7 @@
   "name": "lichi/vk-sdk",
   "type": "library",
   "description": "Core for lichi Framework",
-  "keywords": ["Lichi","lichi"],
+  "keywords": ["Lichi","lichi", "VK SDK", "vk sdk", "vk-sdk"],
   "homepage": "https://github.com/IvanHunters/lichi-vk-sdk",
   "license": "MIT",
   "authors": [
