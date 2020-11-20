@@ -20,12 +20,19 @@ class ApiProvider implements \Lichi\Vk\ApiProvider
      * @var Documents
      */
     public Documents $documents;
+    /**
+     * @var Wall
+     */
+    public Wall $wall;
 
     public function __construct(string $token) {
         $this->token = $token;
-        $this->messages = new Messages($this);
-        $this->photos = new Photos($this);
-        $this->documents = new Documents($this);
+        $provider = $this;
+
+        $this->messages = new Messages($provider);
+        $this->photos = new Photos($provider);
+        $this->documents = new Documents($provider);
+        $this->wall = new Wall($provider);
     }
 
     public function callMethod(string $method, array $params) :array
