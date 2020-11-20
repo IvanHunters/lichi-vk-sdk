@@ -20,6 +20,7 @@ interface Wall
      * @return array
      */
     public function get(int $ownerId, int $count = 100, int $offset = 0, $filter = "all"): array;
+    public function getCountPostsFor(int $ownerId): int;
 
     /**
      * @param int $ownerId

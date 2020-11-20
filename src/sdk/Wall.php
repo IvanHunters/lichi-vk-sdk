@@ -88,4 +88,18 @@ class Wall implements \Lichi\Vk\Wall
 
         return $this->api->callMethod("wall.edit", $otherParams);
     }
+
+    /**
+     * @param int $ownerId
+     * @return int
+     */
+    public function getCountPostsFor(int $ownerId): int
+    {
+        $otherParams = [];
+        $otherParams['owner_id'] = $ownerId;
+        $otherParams['count'] = 1;
+        $otherParams['offset'] = 0;
+        $response = $this->api->callMethod("wall.get", $otherParams);
+        return $response['count'];
+    }
 }
