@@ -27,6 +27,16 @@ class ApiProvider implements \Lichi\Vk\ApiProvider
 
     public function __construct(string $token) {
         $this->token = $token;
+        $this->setDependence();
+    }
+
+    public function changeToken(string $newToken): void
+    {
+        $this->token = $newToken;
+        $this->setDependence();
+    }
+
+    private function setDependence(): void{
         $provider = $this;
 
         $this->messages = new Messages($provider);

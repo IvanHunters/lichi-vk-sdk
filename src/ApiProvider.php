@@ -11,6 +11,11 @@ interface ApiProvider
     public function __construct(string $token);
 
     /**
+     * @param string $newToken
+     */
+    public function changeToken(string $newToken): void;
+
+    /**
      * @param string $method
      * @param array $params
      * @return array
