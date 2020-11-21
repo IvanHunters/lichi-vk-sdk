@@ -11,6 +11,8 @@
       "email": "ohotnikovivan@yandex.ru"
     }
   ],
+  "minimum-stability": "dev-main",
+  "prefer-stable": true,
   "require": {
     "ext-curl": "*",
     "ext-json": "*"
