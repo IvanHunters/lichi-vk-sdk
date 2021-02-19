@@ -10,7 +10,7 @@ class Photos implements \Lichi\Vk\Photos
     /**
      * @var ApiProvider
      */
-    private ApiProvider $api;
+    private $api;
 
     public function __construct(ApiProvider $provider)
     {

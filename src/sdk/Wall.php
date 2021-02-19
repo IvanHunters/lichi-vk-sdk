@@ -11,7 +11,7 @@ class Wall implements \Lichi\Vk\Wall
     /**
      * @var ApiProvider
      */
-    private ApiProvider $api;
+    private $api;
 
     /**
      * Wall constructor.

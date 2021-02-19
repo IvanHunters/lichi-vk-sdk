@@ -20,5 +20,5 @@ interface ApiProvider
      * @param array $params
      * @return array
      */
-    public function callMethod(string $method, array $params) :array;
+    public function callMethod(string $method, array $params);
 }

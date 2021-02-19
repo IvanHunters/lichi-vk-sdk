@@ -12,7 +12,7 @@ class Documents implements \Lichi\Vk\Documents
     /**
      * @var ApiProvider
      */
-    private ApiProvider $api;
+    private $api;
 
     public function __construct(ApiProvider $provider)
     {

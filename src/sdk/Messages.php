@@ -8,9 +8,9 @@ class Messages implements \Lichi\Vk\Messages
     /**
      * @var ApiProvider
      */
-    private ApiProvider $api;
+    private $api;
 
-    public function __construct(ApiProvider $provider)
+    public function __construct($provider)
     {
         $this->api = $provider;
     }
@@ -21,7 +21,7 @@ class Messages implements \Lichi\Vk\Messages
      * @param array $otherParams
      * @return array
      */
-    public function send(int $userId, string $message, array $otherParams = []): array
+    public function send(int $userId, string $message, array $otherParams = [])
     {
         if(is_array($message) || is_object($message)){
             $message = var_export($message, true);

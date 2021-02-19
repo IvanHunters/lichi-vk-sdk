@@ -1,36 +1,37 @@
 <?php
 
+
 namespace Lichi\Vk\Sdk;
 
 use RuntimeException;
 
 class ApiProvider implements \Lichi\Vk\ApiProvider
 {
-    public string $token;
+    public $token;
     const VER = "5.103";
     /**
      * @var Messages
      */
-    public Messages $messages;
+    public $messages;
     /**
      * @var Photos
      */
-    public Photos $photos;
+    public $photos;
     /**
      * @var Documents
      */
-    public Documents $documents;
+    public $documents;
     /**
      * @var Wall
      */
-    public Wall $wall;
+    public $wall;
 
-    public function __construct(string $token) {
+    public function __construct($token) {
         $this->token = $token;
         $this->setDependence();
     }
 
-    public function changeToken(string $newToken): void
+    public function changeToken($newToken): void
     {
         $this->token = $newToken;
         $this->setDependence();
@@ -45,7 +46,7 @@ class ApiProvider implements \Lichi\Vk\ApiProvider
         $this->wall = new Wall($provider);
     }
 
-    public function callMethod(string $method, array $params) :array
+    public function callMethod(string $method, array $params)
     {
         $params['access_token']= $this->token;
         $response = $this->curlRequest("https://api.vk.com/method/$method?v=" . self::VER, $params);

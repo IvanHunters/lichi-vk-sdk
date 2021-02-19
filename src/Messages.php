@@ -18,7 +18,7 @@ interface Messages
      * @param array $otherParams
      * @return array
      */
-    public function send(int $userId, string $message, array $otherParams = []): array;
+    public function send(int $userId, string $message, array $otherParams = []);
 
     /**
      * @param int $messageId
