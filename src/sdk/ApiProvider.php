@@ -53,7 +53,7 @@ class ApiProvider implements \Lichi\Vk\ApiProvider
         if (isset($response['error'])) {
             throw new RuntimeException("Get error from VK API: " . $response['error']['error_msg']);
         }
-        return $response['response'];
+        return (array) $response['response'];
     }
 
     private function curlRequest(string $url, array $params, $flag=false) :array
