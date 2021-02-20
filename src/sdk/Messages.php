@@ -26,7 +26,9 @@ class Messages implements \Lichi\Vk\Messages
         if(is_array($message) || is_object($message)){
             $message = var_export($message, true);
         }
-        $otherParams['user_id'] = $userId;
+        if(!isset($otherParams['user_ids'])) {
+            $otherParams['user_id'] = $userId;
+        }
         $otherParams['message'] = $message;
         $otherParams['random_id'] = rand(1,10000000);
 
